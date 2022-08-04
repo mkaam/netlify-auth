@@ -2,7 +2,6 @@ FROM golang:alpine
 WORKDIR /app/
 RUN apk update && apk add git
 
-# checkout the latest tag of jfrog cli
 RUN mkdir -p /go/src/github.com/mkaam/netlify-auth \
  && git clone https://github.com/mkaam/netlify-auth /go/src/github.com/mkaam/netlify-auth \
  && cd /go/src/github.com/mkaam/netlify-auth \
